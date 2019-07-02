@@ -1,7 +1,15 @@
-deploy:
-  on:
-    tags: true
-  provider: npm
-  email: fabio.cappuc@gmail.com
-  api_key:
-    secure: FccjfRT1J5bhM95XxbnnxS63l0Jn7vsfVhetwOYSmr2wD8xfXgd1Vp41CnDiffT1Hh1XVHWBmLShVExY0er7ozh9paXo/yoOWCP+obY6nfHZtTLQaNtuenGCflGbRljTtUijPeFTGhNw5WdQnF6hZcUNJbMlSoDCVyAhmK5DCgIt92omwBwd6P7xlC2ua6sk7rg7g4Qn/rEimqVEQh8iiD9p852OoBw+ZzPxeqR5VzanAU2ud4UaKXIlj1nmE+iCZx81X/zqPOFHe/KBygvsT+o1aWxX/BBmuE3rZ5aba2LZ355VyPbzqZmSCFMB4isZeFnsBepE0b6I2Y/JaFKlEKqkZYrDjKz5m12jX+W4pCufVUISpr0T8aak3znsGIbVOdXyf4kWe63hRCBfcbfsC4wDgpY6JkoNfRKZlOSecDR4T1O1lgHff9nHCkGu+M8wNNAboHZqs6cCrYRkidX47lrXfDCMettiRSqomkfCPkd14qyqH+sOqpzmPenpb4aTZWvHSuiHzY/sI1IkgSQkBu3KUmgAxApvcfflZkAc0p0fEEAkzwNkogzpxkA+NxTzaseS2kV8NLyUBXrvlMY+S93HtRG99pSPxOgcp28VT+RFlyJwfPLFrsY2IiyDkAVI87wXuQ/49FRZsf+iiNNa0a93rboErT6EfN526JpT6P0=
+install: true
+
+jobs:
+  include:
+    - stage: npm release
+      if: tag IS present
+      node_js: "8"
+      deploy:
+        provider: npm
+        email: fabio.cappuc@gmail.com
+        api_key:
+          secure: FccjfRT1J5bhM95XxbnnxS63l0Jn7vsfVhetwOYSmr2wD8xfXgd1Vp41CnDiffT1Hh1XVHWBmLShVExY0er7ozh9paXo/yoOWCP+obY6nfHZtTLQaNtuenGCflGbRljTtUijPeFTGhNw5WdQnF6hZcUNJbMlSoDCVyAhmK5DCgIt92omwBwd6P7xlC2ua6sk7rg7g4Qn/rEimqVEQh8iiD9p852OoBw+ZzPxeqR5VzanAU2ud4UaKXIlj1nmE+iCZx81X/zqPOFHe/KBygvsT+o1aWxX/BBmuE3rZ5aba2LZ355VyPbzqZmSCFMB4isZeFnsBepE0b6I2Y/JaFKlEKqkZYrDjKz5m12jX+W4pCufVUISpr0T8aak3znsGIbVOdXyf4kWe63hRCBfcbfsC4wDgpY6JkoNfRKZlOSecDR4T1O1lgHff9nHCkGu+M8wNNAboHZqs6cCrYRkidX47lrXfDCMettiRSqomkfCPkd14qyqH+sOqpzmPenpb4aTZWvHSuiHzY/sI1IkgSQkBu3KUmgAxApvcfflZkAc0p0fEEAkzwNkogzpxkA+NxTzaseS2kV8NLyUBXrvlMY+S93HtRG99pSPxOgcp28VT+RFlyJwfPLFrsY2IiyDkAVI87wXuQ/49FRZsf+iiNNa0a93rboErT6EfN526JpT6P0=
+        skip_cleanup: true
+        on:
+          tags: true
