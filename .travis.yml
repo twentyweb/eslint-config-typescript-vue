@@ -1,5 +1,8 @@
 install: true
 
+script:
+  - echo "Skipping test"
+
 jobs:
   include:
     - stage: npm release
