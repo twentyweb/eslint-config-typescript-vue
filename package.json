@@ -5,6 +5,9 @@
     "repository": "https://github.com/twentyweb/eslint-config-typescript-vue.git",
     "author": "Fabio Capucci <fabio.cappuc@gmail.com>",
     "license": "MIT",
+    "publishConfig": {
+        "access": "public"
+    },
     "peerDependencies": {
         "@typescript-eslint/eslint-plugin": ">= 1.11",
         "@typescript-eslint/parser": ">= 1.11",
