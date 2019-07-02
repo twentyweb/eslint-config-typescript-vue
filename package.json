@@ -1,0 +1,24 @@
+{
+    "name": "eslint-config-typescript-vue",
+    "version": "1.0.0",
+    "main": ".eslintrc.js",
+    "repository": "https://github.com/twentyweb/eslint-config-typescript-vue.git",
+    "author": "Fabio Capucci <fabio.cappuc@gmail.com>",
+    "license": "MIT",
+    "peerDependencies": {
+        "@typescript-eslint/eslint-plugin": ">= 1.11",
+        "@typescript-eslint/parser": ">= 1.11",
+        "@vue/eslint-config-typescript": ">= 4.0",
+        "eslint": ">= 5",
+        "eslint-plugin-vue": ">= 5.2",
+        "typescript": "*"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^1.11.0",
+        "@typescript-eslint/parser": "^1.11.0",
+        "@vue/eslint-config-typescript": "^4.0.0",
+        "eslint": "^6.0.1",
+        "eslint-plugin-vue": "^5.2.3",
+        "typescript": "^3.5.2"
+    }
+}
