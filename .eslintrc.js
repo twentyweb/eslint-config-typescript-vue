@@ -14,27 +14,30 @@ module.exports = {
         'vue',
     ],
     rules: {
+        "eqeqeq": ["error"],
+        "vue/eqeqeq": ["error"],
         "vue/html-indent": ["error", 4],
         "vue/max-attributes-per-line": ["error", {
-            "singleline": 1,
             "multiline": {
-                "max": 1,
                 "allowFirstLine": true,
             },
         }],
-        "vue/singleline-html-element-content-newline": 0,
-        "@typescript-eslint/explicit-member-accessibility": [2, {
+        // "vue/no-deprecated-scope-attribute": ["error"],
+        "@typescript-eslint/explicit-member-accessibility": ["error", {
             "accessibility": "no-public",
         }],
-        "@typescript-eslint/no-object-literal-type-assertion": 0,
-        "@typescript-eslint/explicit-function-return-type": [1, {
+        "@typescript-eslint/no-object-literal-type-assertion": ["error"],
+        "@typescript-eslint/explicit-function-return-type": ["warn", {
             "allowExpressions": true,
         }],
-        "@typescript-eslint/no-explicit-any": 0,
-        "@typescript-eslint/camelcase": 0,
-        "@typescript-eslint/interface-name-prefix": 0,
-        "@typescript-eslint/no-non-null-assertion": 1,
-        "@typescript-eslint/no-unused-vars": [1, {
+        "@typescript-eslint/no-explicit-any": ["warn", {
+            // "fixToUnknown": true,
+            "ignoreRestArgs": true,
+        }],
+        "@typescript-eslint/camelcase": ["off"],
+        "@typescript-eslint/interface-name-prefix": ["off"],
+        "@typescript-eslint/no-non-null-assertion": ["warn"],
+        "@typescript-eslint/no-unused-vars": ["warn", {
             "ignoreRestSiblings": true,
         }],
     },
