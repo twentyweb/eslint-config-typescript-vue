@@ -1,6 +1,6 @@
 {
     "name": "@twentyweb/eslint-config-typescript-vue",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "main": ".eslintrc.js",
     "repository": "https://github.com/twentyweb/eslint-config-typescript-vue.git",
     "author": "Fabio Capucci <fabio.cappuc@gmail.com>",
@@ -8,20 +8,24 @@
     "publishConfig": {
         "access": "public"
     },
+    "scripts": {
+        "watch:publish": "nodemon --watch .eslintrc.js -e js --exec \"yalc publish --push\""
+    },
     "peerDependencies": {
-        "@typescript-eslint/eslint-plugin": ">= 2.0.0",
-        "@typescript-eslint/parser": ">= 2.0.0",
-        "@vue/eslint-config-typescript": ">= 4.0",
-        "eslint": ">= 6",
-        "eslint-plugin-vue": ">= 5.2",
+        "@typescript-eslint/eslint-plugin": ">= 3.0.0",
+        "@typescript-eslint/parser": ">= 3.0.0",
+        "@vue/eslint-config-typescript": ">= 5.0",
+        "eslint": ">= 7",
+        "eslint-plugin-vue": ">= 6.0",
         "typescript": "*"
     },
     "devDependencies": {
-        "@typescript-eslint/eslint-plugin": "^2.0.0",
-        "@typescript-eslint/parser": "^2.0.0",
-        "@vue/eslint-config-typescript": "^4.0.0",
-        "eslint": "^6.1.0",
-        "eslint-plugin-vue": "^5.2.3",
+        "@typescript-eslint/eslint-plugin": "^3.0.0",
+        "@typescript-eslint/parser": "^3.0.0",
+        "@vue/eslint-config-typescript": "^5.0.2",
+        "eslint": "^7.1.0",
+        "eslint-plugin-vue": "^6.2.2",
+        "nodemon": "^2.0.4",
         "typescript": "^3.5.2"
     }
 }
