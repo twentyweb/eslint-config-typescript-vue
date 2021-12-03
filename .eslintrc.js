@@ -19,11 +19,14 @@ module.exports = {
         'vue/eqeqeq': ['error'],
         'vue/html-indent': ['error', 4],
         'vue/max-attributes-per-line': ['error', {
-            multiline: {
-                allowFirstLine: true,
-            },
+            singleline: 3,
+            multiline: 1,
         }],
-        // "vue/no-deprecated-scope-attribute": ["error"],
+        'vue/first-attribute-linebreak': ['error', {
+            'singleline': 'beside',
+            'multiline': 'beside',
+        }],
+        'vue/multi-word-component-names': ['off'],
         '@typescript-eslint/explicit-member-accessibility': ['error', {
             accessibility: 'no-public',
         }],
@@ -47,7 +50,5 @@ module.exports = {
             'ignoreRestSiblings': true,
         }],
         '@typescript-eslint/ban-ts-comment': ['warn'],
-        // '@typescript-eslint/explicit-module-boundary-types': ['off'],
-        // '@typescript-eslint/ban-types': ['off'],
     },
 };
